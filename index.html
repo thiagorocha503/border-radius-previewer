@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Border Radus Previwer</title>
+</head>
+
+<body>
+    <input type="number" class="input-border-radius" onkeyup="onChangeBorderRadius('top-left',value);" value="1" />
+    <input type="number" class="input-border-radius" onkeyup="onChangeBorderRadius('top-right',value);" value="1" />
+    <div class="box-border" id="box">
+        <p id="box-text">
+            border-radius: 1px;
+        </p>
+    </div>
+    <input type="number" class="input-border-radius" onkeyup="onChangeBorderRadius('bottom-left',value);" value="1" />
+    <input type="number" class="input-border-radius" onkeyup="onChangeBorderRadius('bottom-right', value);" value="1" />
+    <script src="js/app.js"></script>
+</body>
+
+</html>

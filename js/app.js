@@ -55,9 +55,12 @@ function updateBoxText() {
     }
 }
 function onCopy() {
+    // Select
     box_text.select();
     box_text.setSelectionRange(0, 99999); /*For mobile devices*/
     document.execCommand("copy");
+    // deselect
+    document.getSelection().removeAllRanges();
     console.log("Clipboard: " + box_text.value);
 }
 box.style.borderRadius = "1px";

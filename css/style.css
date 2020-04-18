@@ -1,3 +1,5 @@
+/* Reset CSS */
+
 * {
     padding: 0;
     margin: 0;
@@ -5,16 +7,165 @@
     box-sizing: border-box;
 }
 
+
+/*
+div {
+    border: 1px dotted green;
+} */
+
+body {
+    background-color: turquoise;
+}
+
+
+/* Bloco */
+
+.container {
+    background-color: white;
+    border: 1px solid grey;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 3px;
+    position: relative;
+    min-height: 400px;
+    width: 700px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.box-container {
+    height: 400px;
+    position: relative;
+}
+
 .box-border {
     position: relative;
-    background-color: #F0F8FF;
-    width: 270px;
-    height: 270px;
+    width: 300px;
+    height: 300px;
     border: 2px solid black;
-    margin: 10px;
+    background-color: turquoise;
+    font-family: Arial, "Helvetica Neue", sans-serif;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#box-text {
+    position: absolute;
+    border: 1px solid turquoise;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    resize: none;
+    outline: none;
 }
 
 .input-border-radius {
-    border: 1px solid;
+    border: 1px solid turquoise;
     border-radius: 3px;
+    width: 50px;
+}
+
+.box {
+    position: absolute;
+    text-align: center;
+    padding: 1px;
+    width: 70px;
+}
+
+.box-1 {
+    /* border: 1px dashed blue; */
+    bottom: 100%;
+    right: 100%;
+}
+
+.box-2 {
+    /* border: 1px dashed red; */
+    bottom: 100%;
+    left: 100%
+}
+
+.box-3 {
+    /* border: 1px dashed orange; */
+    top: 100%;
+    right: 100%;
+}
+
+.box-4 {
+    /*border: 1px dashed #008000;*/
+    top: 100%;
+    left: 100%;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.button-copy {
+    border: 1px solid turquoise;
+    background-color: turquoise;
+    color: white;
+    border-radius: 3px;
+    padding: 5px 20px 5px 20px;
+}
+
+.div-buttons p,
+.header h1 {
+    text-align: center;
+    padding: 5px;
+}
+
+.footer {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #292c2f;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer p {
+    font-family: Helvetica, sans-serif;
+    color: #8f9296;
+}
+
+#heart-emoji {
+    color: red;
+}
+
+#link-profile:link {
+    color: white;
+    text-decoration: none;
+}
+
+#link-profile:visited {
+    color: grey;
+}
+
+#link-profile:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+/* 
+  Remove Arrows/Spinners
+  
+  Chrome, Safari, Edge, Opera
+*/
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    /* Firefox */
+    -moz-appearance: textfield;
 }

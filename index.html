@@ -5,18 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Border Radus Previwer</title>
+    <title>Border Radus Previewer</title>
 </head>
 
 <body>
-    <input type="number" class="input-border-radius" onkeyup="onChangeBorderRadius('top-left',value);" value="1" />
-    <input type="number" class="input-border-radius" onkeyup="onChangeBorderRadius('top-right',value);" value="1" />
-    <div class="box-border" id="box">
-        <textarea id="box-text" rows="5" cols="35" readonly>border-radius: 1px;</textarea>
+    <div class="container">
+        <div class="header">
+            <h1>Border radius preview</h1>
+        </div>
+        <div class="box-container">
+            <!--Box-->
+            <div class="box-border" id="box">
+                <textarea id="box-text" rows="5" cols="35" readonly>border-radius: 1px;</textarea>
+                <!--border top left radius-->
+                <div class="box box-1">
+                    <input type="number" class="input-border-radius" onkeyup="onChangeBorderRadius('top-left',value);" value="1" />
+                </div>
+                <!-- border top right radius-->
+                <div class="box box-2">
+                    <input type="number" class="input-border-radius" onkeyup="onChangeBorderRadius('top-right',value);" value="1" />
+                </div>
+                <!-- border bottom left radius-->
+                <div class="box box-3">
+                    <input type="number" class="input-border-radius" onkeyup="onChangeBorderRadius('bottom-left',value);" value="1" />
+                </div>
+                <!-- border bottom right radius-->
+                <div class="box box-4">
+                    <input type="number" class="input-border-radius" onkeyup="onChangeBorderRadius('bottom-right', value);" value="1" /><br/>
+                </div>
+            </div>
+        </div>
+        <div class="div-buttons">
+            <p>
+                <input type="button" class="button button-copy" value="Copy" onclick="onCopy();">
+            </p>
+        </div>
     </div>
-    <input type="number" class="input-border-radius" onkeyup="onChangeBorderRadius('bottom-left',value);" value="1" />
-    <input type="number" class="input-border-radius" onkeyup="onChangeBorderRadius('bottom-right', value);" value="1" /><br/>
-    <input type="button" value="Copiar" onclick="onCopy();">
+    <div class="footer">
+        <p>Made with <span id="heart-emoji">❤</span> by <a href="http://github.com/thiagorocha503" target="_blank" rel="noopener noreferrer" id="link-profile">Thiago</a></p>
+    </div>
     <script src="js/app.js"></script>
 </body>
 

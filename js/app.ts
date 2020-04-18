@@ -1,5 +1,5 @@
 const box: HTMLElement = document.getElementById("box");
-const box_text: HTMLElement = document.getElementById("box-text");
+const box_text: HTMLInputElement = document.getElementById("box-text") as HTMLInputElement;
 
 function onChangeBorderRadius(border_radius: string, value: string) {
     console.log("change " + border_radius + " radius:<" + value + ">");
@@ -43,13 +43,13 @@ function updateBoxText() {
         box_text.innerHTML = `border-radius: ${borderTopLeftRadius}px ${borderTopRightRadius}px;`;
     } else {// caso todas as bordas diferentes
         if (borderTopLeftRadius != 0) {
-            result += `border-top-left-radius: ${borderTopLeftRadius}px;<br> `;
+            result += `border-top-left-radius: ${borderTopLeftRadius}px;\n`;
         }
         if (borderTopRightRadius != 0) {
-            result += `border-top-right-radius: ${borderTopRightRadius}px;<br>`;
+            result += `border-top-right-radius: ${borderTopRightRadius}px;\n`;
         }
         if (borderBottomRightRadius) {
-            result += `border-bottom-right-radius: ${borderBottomRightRadius}px;<br>`;
+            result += `border-bottom-right-radius: ${borderBottomRightRadius}px;\n`;
         }
         if (borderBottomLeftRadius != 0) {
             result += `border-bottom-left-radius: ${borderBottomLeftRadius}px;`;
@@ -57,6 +57,13 @@ function updateBoxText() {
         box_text.innerHTML = result;
     }
 
+}
+
+function onCopy(){
+    box_text.select();
+    box_text.setSelectionRange(0, 99999); /*For mobile devices*/
+    document.execCommand("copy");
+    console.log("Clipboard: "+box_text.value);
 }
 
 

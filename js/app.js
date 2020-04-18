@@ -40,18 +40,24 @@ function updateBoxText() {
     }
     else { // caso todas as bordas diferentes
         if (borderTopLeftRadius != 0) {
-            result += "border-top-left-radius: " + borderTopLeftRadius + "px;<br> ";
+            result += "border-top-left-radius: " + borderTopLeftRadius + "px;\n";
         }
         if (borderTopRightRadius != 0) {
-            result += "border-top-right-radius: " + borderTopRightRadius + "px;<br>";
+            result += "border-top-right-radius: " + borderTopRightRadius + "px;\n";
         }
         if (borderBottomRightRadius) {
-            result += "border-bottom-right-radius: " + borderBottomRightRadius + "px;<br>";
+            result += "border-bottom-right-radius: " + borderBottomRightRadius + "px;\n";
         }
         if (borderBottomLeftRadius != 0) {
             result += "border-bottom-left-radius: " + borderBottomLeftRadius + "px;";
         }
         box_text.innerHTML = result;
     }
+}
+function onCopy() {
+    box_text.select();
+    box_text.setSelectionRange(0, 99999); /*For mobile devices*/
+    document.execCommand("copy");
+    console.log("Clipboard: " + box_text.value);
 }
 box.style.borderRadius = "1px";

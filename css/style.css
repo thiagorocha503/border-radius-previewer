@@ -58,6 +58,10 @@ body {
     transform: translateX(-50%) translateY(-50%);
     resize: none;
     outline: none;
+    padding-top: 5px;
+    padding-left: 5px;
+    width: 265px;
+    height: 80px;
 }
 
 .input-border-radius {
